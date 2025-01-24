@@ -11,11 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int index = 0;
     return MaterialApp(
-      home: ScreenOne(
-       
-      ),
+      debugShowCheckedModeBanner: false,
+      home: ScreenOne(),
     );
   }
 }

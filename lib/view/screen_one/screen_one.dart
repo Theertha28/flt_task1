@@ -61,7 +61,8 @@ class ScreenOne extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "Search...",
