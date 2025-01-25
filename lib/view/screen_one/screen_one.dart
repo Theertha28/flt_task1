@@ -2,9 +2,14 @@ import 'package:flt_task1/view/screen_two/screen_two.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ScreenOne extends StatelessWidget {
+class ScreenOne extends StatefulWidget {
   const ScreenOne({super.key});
 
+  @override
+  State<ScreenOne> createState() => _ScreenOneState();
+}
+
+class _ScreenOneState extends State<ScreenOne> {
   @override
   Widget build(BuildContext context) {
     List Specialities = [
@@ -13,7 +18,7 @@ class ScreenOne extends StatelessWidget {
       {"imagePath": "assets/images/skin 1.png", "title": "Skin & Hair"},
       {"imagePath": "assets/images/mental 1 (1).png", "title": "Mental Health"},
       {"imagePath": "assets/images/bones 1.png", "title": "Bones & Joints"},
-      {"imagePath": "assets/images/ent 1.png", "title": "Ear,Nose,Throat"},
+      {"imagePath": "assets/images/ent 1.png", "title": "Ear, Nose, Throat"},
       {"imagePath": "assets/images/lungs 1.png", "title": "Pulmonologist"},
     ];
     return Scaffold(
@@ -32,8 +37,17 @@ class ScreenOne extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.location_on, color: Colors.white),
-            SizedBox(width: 8),
-            Text("Banglore", style: TextStyle(color: Colors.white)),
+            SizedBox(width: 5),
+            DropdownButton(
+                iconEnabledColor: Colors.white,
+                items: [
+                  DropdownMenuItem(
+                      child: Text(
+                    "Banglore",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  )),
+                ],
+                onChanged: (value) {})
           ],
         ),
         actions: [
